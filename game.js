@@ -24,12 +24,16 @@ function nextSequence() {
   userClickedPattern = [];
 }
 
-$("body").on("keydown", function () {
+function startGame() {
   if (!started) {
     nextSequence();
     started = true;
   }
-});
+}
+
+$("body").on("keydown", startGame);
+
+$("body").on("click", startGame);
 
 $("div.btn").on("click", function (event) {
   let currentButton = event.currentTarget.id;
