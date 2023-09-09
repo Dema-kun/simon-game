@@ -31,9 +31,7 @@ function startGame() {
   }
 }
 
-$("body").on("keydown", startGame());
-
-$("body").on("click", startGame());
+$("body").on("keydown click", startGame);
 
 $("div.btn").on("click", function (event) {
   let currentButton = event.currentTarget.id;
