@@ -62,8 +62,12 @@ function gameOver() {
   setTimeout(function () {
     $("body").removeClass("game-over");
   }, 500);
-  $("#level-title").text("Вы проиграли! Нажмите любую кнопку для перезапуска");
-  resetGame();
+  setTimeout(function () {
+    $("#level-title").text(
+      "Вы проиграли! Нажмите любую кнопку для перезапуска"
+    );
+    resetGame();
+  }, 200);
 }
 
 function resetGame() {
